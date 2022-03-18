@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name ="viewport" content="width=device-widht,initia-scale=1.0">
+        <title>weather app</title>
+        <link rel="stylesheet" type="text/css" href="../views/css.css"/>
+        <link href="https://fonts.googleapis.com/css?family=Open+Sans:300"
+        rel="stylesheet" 
+        type="text/css"
+/>
+<style>
+    
+body{
+    width: 800px;
+    margin: 0 auto;
+    font-family: 'Open Sans', sans-serif;
+    background-image:url("abc.jpeg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-size:cover;
+  }
+.container
+ {
+  width: 600px;
+  margin: 0 auto;
+}
+  fieldset {
+    display: block;
+    -webkit-margin-start: 0px;
+    -webkit-margin-end: 0px;
+    -webkit-padding-before: 0em;
+    -webkit-padding-start: 0em;
+    -webkit-padding-end: 0em;
+    -webkit-padding-after: 0em;
+    border: 0px;
+    border-image-source: initial;
+    border-image-slice: initial;
+    border-image-width: initial;
+    border-image-outset: initial;
+    border-image-repeat: initial;
+    min-width: -webkit-min-content;
+    padding: 30px;
+  }
+  .city {
+    display: block;
+    font-weight:300;
+    width: 100%;
+    font-size: 25px;
+    border:0px;
+    outline: none;
+    width: 100%;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+    color: #4b545f;
+    background: #fff;
+    font-family: Open Sans,Verdana;
+    padding: 10px 15px;
+    margin: 30px 0px;
+    -webkit-transition: all 0.1s ease-in-out;
+    -moz-transition: all 0.1s ease-in-out;
+    -ms-transition: all 0.1s ease-in-out;
+    -o-transition: all 0.1s ease-in-out;
+    transition: all 0.1s ease-in-out;
+  }
+  .city:focus {
+    border-bottom:1px solid #ddd;
+  }
+  .get {
+    background-color: transparent;
+    color:white;
+    font-size: 16px;
+    border:2px solid #ddd;
+    padding:10px 30px; 
+    min-width: 350px;
+    -webkit-transition: all 0.1s ease-in-out;
+    -moz-transition: all 0.1s ease-in-out;
+    -ms-transition: all 0.1s ease-in-out;
+    -o-transition: all 0.1s ease-in-out;
+    transition: all 0.1s ease-in-out;
+  }
+  .get:hover {
+    border:2px solid #515151;
+  }
+  p
+  {
+    color:white;
+    font-style: italic;
+    font-size: 24px;
+  }
+</style>
+    </head>
+    <body>
+        <div class="container">
+     <fieldset>
+         <form action="/" method="POST" autocomplete="off">
+             <input name='city' type="text" placeholder="Enter a city" required class="city"/>
+             <button class="get">Get weather</button>
+         </form>
+         <% if(weather!==null){
+             %><p><%=weather%></p>
+             <%}%> <% if(error!==null){%>
+            <p>{%=error%></p><%}%>
+         
+     </fieldset>
+ </div>
+    </body>
+</html>
